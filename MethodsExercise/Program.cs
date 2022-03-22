@@ -6,6 +6,11 @@ namespace MethodsExercise
     {
         static void Main(string[] args)
         {
+            MadLib();
+            Operations();
+        }
+        public static void MadLib()
+        {
             Console.WriteLine("Enter your name");
             var name = Console.ReadLine();
             Console.WriteLine("Enter a friend's name");
@@ -25,7 +30,10 @@ namespace MethodsExercise
                 $" this to adventure the world with their friends. {name} went to {place1} and" +
                 $" together with {friend}, they tried {activity}. {name} has always wanted to see {place2} and" +
                 $" try {food}. He completed his journey when he arrived home in {hometown}.");
+        }
 
+        public static void Operations()
+        {
             Console.WriteLine("Enter an integer value for x");
             int x = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter an integer value for y");
@@ -58,6 +66,18 @@ namespace MethodsExercise
         public static int Modulus(int x, int y)
         {
             return x % y;
+        }
+
+        //multiple parameters
+        public static int Sum(params int[] nums)
+        {
+            var summation = 0;
+            foreach (var x in nums)
+            {
+                summation += x;
+            }
+
+            return summation
         }
     }
 }
